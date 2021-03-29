@@ -1,10 +1,18 @@
 # django_on_kubernetes
 
 ## clone
-`git clone --recursive https://github.com/shuji-oh/django_on_kubernetes`  
+```shell
+git clone --recursive https://github.com/shuji-oh/django_on_kubernetes  
+```  
 
 ## GCPのpython-docs-sampleのコードの変更
-django v2.2 LTSで動かすために，以下の項目を変更する．  
+django v2.2 LTSで動かすために，以下の項目を変更する．
+
+```shell
+$ cd django_on_kubernetes/python-docs-samples  
+$ git apply ../diff_python-docs-samples.patch  
+```
+
 ```diff
 diff --git a/kubernetes_engine/django_tutorial/mysite/settings.py b/kubernetes_engine/django_tutorial/mysite/settings.py
 index bdcb3991..c3742f93 100644
